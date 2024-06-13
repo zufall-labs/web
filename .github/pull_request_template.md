@@ -1,8 +1,8 @@
-This pull request fixes the bug [name-of-bug](link-to-bug). \
-The bugfix is about -add a short description in this block that describes the bug this pull request fixes-.
+This pull request implements the issue [name-of-issue](link-to-issue). \
+The issue is about -add a short description in this block that describes the issue this pull request implements-.
 
 Breaking changes \
-If this this bugfix introduces any breaking changes or changes the behavior of app, explain them here. If there are none, simply write 'None'.
+If this issue introduces any breaking changes or changes the behavior of app, explain them here. If there are none, simply write 'None'.
 
 Make sure you have the following tasks completed:
 - [ ] Existing functionality has not been broken without good reason or is reasoned about in the section 'Breaking changes'
