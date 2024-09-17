@@ -1,5 +1,7 @@
-<script>
-    //Place the wild Github Kanban things here
+<script lang=ts>
+    export let data;
+    console.log(data);
+    const issues = data.data.filter((item: any) => !item.pull_request);
 </script>
 
 <div class="body">
@@ -14,7 +16,9 @@
             </div>
         </div>
         <div class="main-content">
-            Coming Soon!
+            {#each issues as issue}
+                {issue.title}
+            {/each}
         </div>
     </div>
 </div>
@@ -22,31 +26,39 @@
 <style>
     @import '/src/lib/fonts.css';
 
-    .body{
-        font-family: 'HelveticaNowDisplay', sans-serif;
-        font-weight: bold;
-        position: absolute;
-        background-color: rgb(255 255 255 / 40%);
-        backdrop-filter: blur(10px);
-        height: 384px;
-        width: 350px;
-        border-radius: 15px;
-        right: 50px;
-        bottom: 0;
-        right: 0;
+    @media screen and (max-width: 480px) {
+        .body{
+            display: none;
+        }
     }
 
-    .content-area{
-        justify-self: center;
-        width: 80%;
-        height: 80%;
-        margin: 10% 10%;
-    }
+    @media(min-width: 1025px){
+        .body{
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-weight: bold;
+            position: absolute;
+            background-color: rgb(255 255 255 / 40%);
+            backdrop-filter: blur(10px);
+            height: 384px;
+            width: 350px;
+            border-radius: 15px;
+            right: 50px;
+            bottom: 0;
+            right: 0;
+        }
 
-    .body p{
-        height: 7px;
-    }
+        .content-area{
+            justify-self: center;
+            width: 80%;
+            height: 80%;
+            margin: 10% 10%;
+        }
 
-    .main-content{
+        .body p{
+            height: 7px;
+        }
+
+        .main-content{
+        }
     }
 </style>

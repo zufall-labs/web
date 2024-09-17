@@ -25,52 +25,64 @@
 
 <style>
     @import '/src/lib/fonts.css';
-
-    .body{
-        font-family: 'HelveticaNowDisplay', sans-serif;
-        height: 80%;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        .body{
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            position: relative;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 
-    .headline{
-        font-size: 600%;
-        font-weight: bold;
-        line-height: 100%;
-    }
+    @media(min-width: 1025px){
+        .body{
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            height: 80%;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    .text-area{
-        width: 251px;
-        margin: 30px 0;
-    }
+        .headline{
+            font-size: 600%;
+            font-weight: bold;
+            line-height: 100%;
+        }
 
-    .contact-button{
-        width: 167px;
-        height: 40px;
-        border: 1px solid black;
-        border-radius: 7px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .text-area{
+            width: 251px;
+            margin: 30px 0;
+        }
 
-    .bottom-banner{
-        width: 491px;
-        display: flex;
-        flex-direction: row;
-    }
+        .contact-button{
+            width: 167px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .left-side{
-        font-weight: bold;
-        align-self: center;
-        margin-right: auto;
-    }
+        .bottom-banner{
+            width: 491px;
+            display: flex;
+            flex-direction: row;
+        }
 
-    .right-side{
-        align-self: center;
-        margin: auto;
+        .left-side{
+            font-weight: bold;
+            align-self: center;
+            margin-right: auto;
+        }
+
+        .right-side{
+            align-self: center;
+            margin: auto;
+        }
     }
 </style>

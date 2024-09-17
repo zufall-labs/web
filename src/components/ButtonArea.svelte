@@ -17,35 +17,43 @@
 <style>
     @import '/src/lib/fonts.css';
 
-    .body{
-        font-family: 'HelveticaNowDisplay', sans-serif;
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        right: 0;
-        top: 50px;
-        width: 321px;
-        height: 115px;
+    @media screen and (max-width: 480px) {
+        .body{
+            display: none;
+        }
     }
 
-    .side{
-        flex-grow: 1;
-        padding-left: 5%;
-    }
+    @media(min-width: 1025px){
+        .body{
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            width: 321px;
+            height: 115px;
+        }
 
-    .side .text{
-        font-weight: bold;
-    }
+        .side{
+            flex-grow: 1;
+            padding-left: 5%;
+        }
 
-    .side .button{
-        position: absolute;
-        border: 1px solid black;
-        border-radius: 7px;
-        height: 40px;
-        width: 131px;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .side .text{
+            font-weight: bold;
+        }
+
+        .side .button{
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 7px;
+            height: 40px;
+            width: 131px;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 </style>

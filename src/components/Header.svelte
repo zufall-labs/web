@@ -15,50 +15,101 @@
 <style>
     @import '/src/lib/fonts.css';
 
-    .Header{
-        display: flex;
-        align-items: center;
-        margin: 63px auto 0 auto;
-        height: 63px;
-        width: 1344px;
-        border-radius: 7px;
-        background: linear-gradient(to right, #ECECEC, #FCFCFC, #ECECEC);
+    @media screen and (max-width: 480px) {
+        .Header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            height: 63px;
+            background: linear-gradient(to right, #ECECEC, #FCFCFC, #ECECEC);
+            border-radius: 7px;
+            margin: 30px auto 0 auto;
+        }
+
+        .Header .Left{
+            display: flex;
+            height: 49px;
+            width: 160px;
+            margin-left: 7px;
+        }
+
+        .Header .Left img{
+            width: 49px;
+            border-radius: 7px;
+        }
+
+        .Header .Left p{
+            margin-left: 10px;
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-weight: bold;
+        }
+
+        .Middle{
+            display: none;
+        }
+
+        .Header .Right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 130px;
+            height: 49px;
+            border-radius: 7px;
+            background: black;
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-weight: bold;
+            color: white;
+            margin-right: 7px;
+        }
     }
 
-    .Header .Left{
-        display: flex;
-        height: 49px;
-        width: 160px;
-        margin-left: 7px;
-    }
+    @media(min-width: 1025px){
+        .Header{
+            display: flex;
+            align-items: center;
+            margin: 63px auto 0 auto;
+            height: 63px;
+            width: 1344px;
+            border-radius: 7px;
+            background: linear-gradient(to right, #ECECEC, #FCFCFC, #ECECEC);
+        }
 
-    .Header .Left img{
-        width: 49px;
-        border-radius: 7px;
-    }
+        .Header .Left{
+            display: flex;
+            height: 49px;
+            width: 160px;
+            margin-left: 7px;
+        }
 
-    .Header .Left p{
-        margin-left: auto;
-        font-family: 'HelveticaNowDisplay', sans-serif;
-        font-weight: bold;
-    }
+        .Header .Left img{
+            width: 49px;
+            border-radius: 7px;
+        }
 
-    .Header .Middle{
-        margin: 0 auto;
-    }
+        .Header .Left p{
+            margin-left: auto;
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-weight: bold;
+        }
 
-    .Header .Right{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 7px;
-        width: 130px;
-        height: 49px;
-        border-radius: 7px;
-        background: black;
-        font-family: 'HelveticaNowDisplay', sans-serif;
-        font-weight: bold;
-        color: white;
+        .Header .Middle{
+            margin: 0 auto;
+        }
+
+        .Header .Right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 7px;
+            width: 130px;
+            height: 49px;
+            border-radius: 7px;
+            background: black;
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-weight: bold;
+            color: white;
+        }
     }
 
 </style>
