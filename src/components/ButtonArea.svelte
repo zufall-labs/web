@@ -5,7 +5,7 @@
     </div>
     <div class="divider">
         <svg height="115" width="3" xmlns="http://www.w3.org/2000/svg">
-            <line x1="0" y1="0" x2="0" y2="115" style="stroke:#000000; stroke-width: 4" />
+            <line x1="0" y1="0" x2="0" y2="115" style="stroke:#000000; stroke-width: 4"/>
         </svg>
     </div>
     <div class="side">
@@ -18,13 +18,13 @@
     @import '/src/lib/fonts.css';
 
     @media screen and (max-width: 480px) {
-        .body{
+        .body {
             display: none;
         }
     }
 
-    @media(min-width: 1025px){
-        .body{
+    @media (min-width: 1025px) {
+        .body {
             font-family: 'HelveticaNowDisplay', sans-serif;
             display: flex;
             flex-direction: row;
@@ -35,16 +35,16 @@
             height: 115px;
         }
 
-        .side{
+        .side {
             flex-grow: 1;
             padding-left: 5%;
         }
 
-        .side .text{
+        .side .text {
             font-weight: bold;
         }
 
-        .side .button{
+        .side .button {
             position: absolute;
             border: 1px solid black;
             border-radius: 7px;

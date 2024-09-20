@@ -16,7 +16,7 @@
     @import '/src/lib/fonts.css';
 
     @media screen and (max-width: 480px) {
-        .Header{
+        .Header {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -27,29 +27,29 @@
             margin: 30px auto 0 auto;
         }
 
-        .Header .Left{
+        .Header .Left {
             display: flex;
             height: 49px;
             width: 160px;
             margin-left: 7px;
         }
 
-        .Header .Left img{
+        .Header .Left img {
             width: 49px;
             border-radius: 7px;
         }
 
-        .Header .Left p{
+        .Header .Left p {
             margin-left: 10px;
             font-family: 'HelveticaNowDisplay', sans-serif;
             font-weight: bold;
         }
 
-        .Middle{
+        .Middle {
             display: none;
         }
 
-        .Header .Right{
+        .Header .Right {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -64,8 +64,8 @@
         }
     }
 
-    @media(min-width: 1025px){
-        .Header{
+    @media (min-width: 1025px) {
+        .Header {
             display: flex;
             align-items: center;
             margin: 63px auto 0 auto;
@@ -75,29 +75,29 @@
             background: linear-gradient(to right, #ECECEC, #FCFCFC, #ECECEC);
         }
 
-        .Header .Left{
+        .Header .Left {
             display: flex;
             height: 49px;
             width: 160px;
             margin-left: 7px;
         }
 
-        .Header .Left img{
+        .Header .Left img {
             width: 49px;
             border-radius: 7px;
         }
 
-        .Header .Left p{
+        .Header .Left p {
             margin-left: auto;
             font-family: 'HelveticaNowDisplay', sans-serif;
             font-weight: bold;
         }
 
-        .Header .Middle{
+        .Header .Middle {
             margin: 0 auto;
         }
 
-        .Header .Right{
+        .Header .Right {
             display: flex;
             justify-content: center;
             align-items: center;

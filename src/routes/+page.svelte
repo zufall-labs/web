@@ -1,5 +1,5 @@
 <script lang=ts>
-    import type { PageServerLoad } from './$types';
+    import type {PageServerLoad} from './$types';
     import Header from "../components/Header.svelte";
     import InterestArea from "../components/InterestArea.svelte";
     import Widget from "../components/Widget.svelte";
@@ -25,7 +25,7 @@
     @import '/src/lib/fonts.css';
 
     @media screen and (max-width: 480px) {
-        .page{
+        .page {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -33,31 +33,31 @@
             background: linear-gradient(to right, #E3E3E3, #F7F7F7, #E3E3E3);
         }
 
-        .content{
+        .content {
             position: relative;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
         }
 
-        .main-area{
+        .main-area {
             width: 90%;
             flex-grow: 1;
         }
     }
 
-    @media (min-width: 768px) and (max-width: 1024px){
-        
+    @media (min-width: 768px) and (max-width: 1024px) {
+
     }
 
-    @media(min-width: 1025px){
+    @media (min-width: 1025px) {
         .page {
             width: 100vw;
             height: 100vh;
             background: linear-gradient(to right, #E3E3E3, #F7F7F7, #E3E3E3);
         }
 
-        .content{
+        .content {
             position: relative;
             margin: 0 auto;
             display: flex;
@@ -77,7 +77,7 @@
             background-repeat: no-repeat;
         }
 
-        .main-area{
+        .main-area {
             flex-grow: 1;
             position: relative;
         }

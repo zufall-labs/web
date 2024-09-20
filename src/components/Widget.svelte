@@ -11,7 +11,7 @@
             <p>working on</p>
             <div class="divider">
                 <svg height="5" width="120" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="0" x2="120" y2="0" style="stroke:#000000; stroke-width: 3" />
+                    <line x1="0" y1="0" x2="120" y2="0" style="stroke:#000000; stroke-width: 3"/>
                 </svg>
             </div>
         </div>
@@ -27,13 +27,13 @@
     @import '/src/lib/fonts.css';
 
     @media screen and (max-width: 480px) {
-        .body{
+        .body {
             display: none;
         }
     }
 
-    @media(min-width: 1025px){
-        .body{
+    @media (min-width: 1025px) {
+        .body {
             font-family: 'HelveticaNowDisplay', sans-serif;
             font-weight: bold;
             position: absolute;
@@ -47,18 +47,18 @@
             right: 0;
         }
 
-        .content-area{
+        .content-area {
             justify-self: center;
             width: 80%;
             height: 80%;
             margin: 10% 10%;
         }
 
-        .body p{
+        .body p {
             height: 7px;
         }
 
-        .main-content{
+        .main-content {
         }
     }
 </style>
