@@ -7,7 +7,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
         </div>
-        <div class="contact-button">GET IN TOUCH</div>
+        <a style="text-decoration: none" href="mailto:backoffice@zufall.ai">
+            <div class="contact-button">GET IN TOUCH</div>
+        </a>
     </div>
     <div class="bottom-banner">
         <div class="left-side">
@@ -69,6 +71,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #89458a;
         }
 
         .bottom-banner {

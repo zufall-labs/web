@@ -9,7 +9,7 @@
         <div class="title">
             <p>Currently</p>
             <p>working on</p>
-            <div class="divider">
+            <div style="margin-bottom: 6px" class="divider">
                 <svg height="5" width="120" xmlns="http://www.w3.org/2000/svg">
                     <line x1="0" y1="0" x2="120" y2="0" style="stroke:#000000; stroke-width: 3"/>
                 </svg>
@@ -17,7 +17,8 @@
         </div>
         <div class="main-content">
             {#each issues as issue}
-                {issue.title}
+                - {issue.title}
+                <div style="margin-top: 8px"></div>
             {/each}
         </div>
     </div>
@@ -42,9 +43,12 @@
             height: 384px;
             width: 350px;
             border-radius: 15px;
-            right: 50px;
             bottom: 0;
             right: 0;
+        }
+
+        .title {
+            position: fixed;
         }
 
         .content-area {
@@ -52,6 +56,7 @@
             width: 80%;
             height: 80%;
             margin: 10% 10%;
+            overflow: hidden;
         }
 
         .body p {
@@ -59,6 +64,15 @@
         }
 
         .main-content {
+            height: calc(100% - 100px);
+            margin-top: 100px;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox  - Removes scrollbar*/
+            -ms-overflow-style: none;
+        }
+
+        .main-content::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
         }
     }
 </style>

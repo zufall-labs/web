@@ -6,8 +6,10 @@
     <div class="Middle">
         <img src="menu-stripes.svg" alt="Menu stripes">
     </div>
-    <div class="Right">
-        Github
+    <div class="github-button">
+        <a style="text-decoration: none" target="_blank" href="https://github.com/zufall-labs/">
+            <div class="button">Github</div>
+        </a>
     </div>
 </div>
 
@@ -49,7 +51,7 @@
             display: none;
         }
 
-        .Header .Right {
+        .Header .github-button .button{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -97,7 +99,7 @@
             margin: 0 auto;
         }
 
-        .Header .Right {
+        .Header .github-button .button{
             display: flex;
             justify-content: center;
             align-items: center;

@@ -1,7 +1,9 @@
 <div class="body">
     <div class="side">
         <div class="text">Research <br/>Internships</div>
-        <div class="button">APPLY NOW</div>
+        <a style="text-decoration: none" href="mailto:backoffice@zufall.ai">
+            <div class="button">APPLY NOW</div>
+        </a>
     </div>
     <div class="divider">
         <svg height="115" width="3" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +12,9 @@
     </div>
     <div class="side">
         <div class="text">Open for <br/>investment</div>
-        <div class="button">INVEST IN US</div>
+        <a style="text-decoration: none" href="mailto:backoffice@zufall.ai">
+            <div class="button">INVEST IN US</div>
+        </a>
     </div>
 </div>
 
@@ -54,6 +58,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #89458a;
         }
     }
 </style>

@@ -73,8 +73,9 @@
             right: 0;
             bottom: 0;
             background-image: url("/hero.png");
-            background-position: center 150px;
+            background-position: center 140px;
             background-repeat: no-repeat;
+            transform: scale(95%);
         }
 
         .main-area {
