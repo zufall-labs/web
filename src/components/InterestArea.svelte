@@ -13,7 +13,7 @@
     </div>
     <div class="bottom-banner">
         <div class="left-side">
-            Join us at <br/>Zufall Labs
+            Join us at Zufall Labs
         </div>
         <div class="divider">
             <svg height="64" width="3" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,9 @@
 <style>
     @import '/src/lib/fonts.css';
 
+    /* Mobile devices */
     @media screen and (max-width: 480px) {
+        /* TODO: Fix CSS styling */
         .body {
             font-family: 'HelveticaNowDisplay', sans-serif;
             position: relative;
@@ -39,8 +41,64 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
+        .top-part {
+            text-align: center;
+        }
+
+        .headline {
+            font-size: 400%;
+            font-weight: bold;
+            line-height: 100%;
+        }
+
+        .text-area {
+            width: 80vw;
+            margin: 30px auto 0 auto;
+        }
+
+        .contact-button {
+            width: 100%;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 7px;
+            display: flex;
+            margin: 10px auto 0 auto;
+            align-items: center;
+            justify-content: center;
+            color: #89458a;
+        }
+
+        .bottom-banner {
+            width: 80vw;
+            margin-top: 900px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .left-side {
+            font-weight: bold;
+            align-self: center;
+            margin-right: auto;
+        }
+
+        .right-side {
+            align-self: center;
+            margin-left: 15px;
+        }
     }
 
+    /* iPads, Tablets */
+    @media (min-width: 481px) {
+        /* TODO: Fix CSS styling */
+    }
+
+    /* Small screens, laptops */
+    @media (min-width: 769px) {
+        /* TODO: Fix CSS styling */
+    }
+
+    /* Desktops, large Screens */
     @media (min-width: 1025px) {
         .body {
             font-family: 'HelveticaNowDisplay', sans-serif;
@@ -91,4 +149,10 @@
             margin: auto;
         }
     }
+
+    /* Extra large Screens, TV */
+    @media (min-width: 1201px) {
+        /* TODO: Fix CSS styling */
+    }
+
 </style>

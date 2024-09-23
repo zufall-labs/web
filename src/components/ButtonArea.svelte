@@ -22,11 +22,60 @@
     @import '/src/lib/fonts.css';
 
     @media screen and (max-width: 480px) {
+        /* TODO: Fix CSS styling */
         .body {
+            font-family: 'HelveticaNowDisplay', sans-serif;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 600px;
+            width: 100%;
+            height: 200px;
+        }
+
+        .side {
+            flex-grow: 1;
+            padding-left: 5%;
+        }
+
+        .divider {
             display: none;
+        }
+
+        .side .text {
+            font-weight: bold;
+        }
+
+        .side .button {
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 7px;
+            height: 40px;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #89458a;
         }
     }
 
+    /* Mobile devices */
+    @media screen and (max-width: 480px) {
+        /* TODO: Fix CSS styling */
+    }
+
+    /* iPads, Tablets */
+    @media (min-width: 481px) {
+        /* TODO: Fix CSS styling */
+    }
+
+    /* Small screens, laptops */
+    @media (min-width: 769px) {
+        /* TODO: Fix CSS styling */
+    }
+
+    /* Desktops, large Screens */
     @media (min-width: 1025px) {
         .body {
             font-family: 'HelveticaNowDisplay', sans-serif;
@@ -61,4 +110,10 @@
             color: #89458a;
         }
     }
+
+    /* Extra large Screens, TV */
+    @media (min-width: 1201px) {
+        /* TODO: Fix CSS styling */
+    }
+
 </style>
