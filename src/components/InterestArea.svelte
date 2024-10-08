@@ -11,20 +11,6 @@
             <div class="contact-button">GET IN TOUCH</div>
         </a>
     </div>
-    <div class="bottom-banner">
-        <div class="left-side">
-            Join us at Zufall Labs
-        </div>
-        <div class="divider">
-            <svg height="64" width="3" xmlns="http://www.w3.org/2000/svg">
-                <line x1="0" y1="0" x2="0" y2="64" style="stroke:#000000; stroke-width: 3"/>
-            </svg>
-        </div>
-        <div class="right-side">
-            Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit, sed do eiusmod tempor <br/>incididunt ut
-            labore et dolore magna aliqua.
-        </div>
-    </div>
 </div>
 
 <style>
@@ -67,24 +53,6 @@
             align-items: center;
             justify-content: center;
             color: #89458a;
-        }
-
-        .bottom-banner {
-            width: 80vw;
-            margin-top: 900px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .left-side {
-            font-weight: bold;
-            align-self: center;
-            margin-right: auto;
-        }
-
-        .right-side {
-            align-self: center;
-            margin-left: 15px;
         }
     }
 
@@ -130,23 +98,6 @@
             align-items: center;
             justify-content: center;
             color: #89458a;
-        }
-
-        .bottom-banner {
-            width: 491px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .left-side {
-            font-weight: bold;
-            align-self: center;
-            margin-right: auto;
-        }
-
-        .right-side {
-            align-self: center;
-            margin: auto;
         }
     }
 

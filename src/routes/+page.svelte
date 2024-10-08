@@ -1,6 +1,7 @@
 <script lang=ts>
     import type {PageServerLoad} from './$types';
     import Header from "../components/Header.svelte";
+    import BottomBanner from "../components/BottomBanner.svelte";
     import InterestArea from "../components/InterestArea.svelte";
     import Widget from "../components/Widget.svelte";
     import ButtonArea from "../components/ButtonArea.svelte";
@@ -14,6 +15,7 @@
         <Header/>
         <div class="main-area">
             <InterestArea/>
+            <BottomBanner/>
             <ButtonArea/>
             <Widget {data}/>
         </div>
