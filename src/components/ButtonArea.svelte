@@ -19,12 +19,12 @@
 </div>
 
 <style>
-    @import '/src/lib/fonts.css';
+    @import "/src/lib/fonts.css";
 
     @media screen and (max-width: 480px) {
         /* TODO: Fix CSS styling */
         .body {
-            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-family: "HelveticaNowDisplay", sans-serif;
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -78,7 +78,7 @@
     /* Desktops, large Screens */
     @media (min-width: 1025px) {
         .body {
-            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-family: "HelveticaNowDisplay", sans-serif;
             display: flex;
             flex-direction: row;
             position: absolute;

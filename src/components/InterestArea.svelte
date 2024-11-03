@@ -14,13 +14,13 @@
 </div>
 
 <style>
-    @import '/src/lib/fonts.css';
+    @import "/src/lib/fonts.css";
 
     /* Mobile devices */
     @media screen and (max-width: 480px) {
         /* TODO: Fix CSS styling */
         .body {
-            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-family: "HelveticaNowDisplay", sans-serif;
             position: relative;
             bottom: 0;
             display: flex;
@@ -69,7 +69,7 @@
     /* Desktops, large Screens */
     @media (min-width: 1025px) {
         .body {
-            font-family: 'HelveticaNowDisplay', sans-serif;
+            font-family: "HelveticaNowDisplay", sans-serif;
             height: 80%;
             position: absolute;
             bottom: 0;

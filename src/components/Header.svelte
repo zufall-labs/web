@@ -15,7 +15,7 @@
 
 
 <style>
-    @import '/src/lib/fonts.css';
+    @import "/src/lib/fonts.css";
 
     /* Common styles */
     .Header {
@@ -41,7 +41,7 @@
     }
 
     .Header .Left p {
-        font-family: 'HelveticaNowDisplay', sans-serif;
+        font-family: "HelveticaNowDisplay", sans-serif;
         font-weight: bold;
     }
 
@@ -53,7 +53,7 @@
         height: 49px;
         border-radius: 7px;
         background: black;
-        font-family: 'HelveticaNowDisplay', sans-serif;
+        font-family: "HelveticaNowDisplay", sans-serif;
         font-weight: bold;
         color: white;
         margin-right: 7px;
