@@ -1,7 +1,12 @@
-<script lang=ts>
+<script lang="ts">
     export let data;
     console.log(data);
-    const issues = data.data.filter((item: any) => !item.pull_request);
+
+    // Access the actual data array and flatten issues into a single array
+    const issues = data.data
+        .map((repo: { repo: string; issues: any[] }) => repo.issues)
+        .flat()
+        .filter((item: any) => !item.pull_request);
 </script>
 
 <div class="body">
@@ -16,10 +21,14 @@
             </div>
         </div>
         <div class="main-content">
-            {#each issues as issue}
-                - {issue.title}
-                <div style="margin-top: 8px"></div>
-            {/each}
+            {#if issues.length > 0}
+                {#each issues as issue}
+                    - {issue.title}
+                    <div style="margin-top: 8px"></div>
+                {/each}
+            {:else}
+                <p>No issues found.</p>
+            {/if}
         </div>
     </div>
 </div>
