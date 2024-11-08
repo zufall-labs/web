@@ -1,61 +1,47 @@
-// app/routes/dashboard.tsx
-import { json, type LoaderFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
-import type { GitHubLoaderData } from "~/types/github";
-
-export const loader: LoaderFunction = async ({ request }) => {
-    const url = new URL(request.url);
-    const apiUrl = `${url.origin}/api/issues`;
-
-    try {
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-            throw new Error(`API returned ${response.status}`);
-        }
-
-        const data = await response.json();
-        return json<GitHubLoaderData>(data);
-    } catch (error) {
-        console.error('Error fetching issues:', error);
-        return json<GitHubLoaderData>({ data: [] });
-    }
-};
-
-export default function Dashboard() {
-    const { data: issues } = useLoaderData<GitHubLoaderData>();
-
+export default function LandingPage() {
     return (
-        <div className="p-4">
-            {issues.map(({ repo, issues }) => (
-                <div key={repo} className="mb-8">
-                    <h2 className="text-xl font-bold mb-4">{repo}</h2>
+        <div className="min-h-screen flex justify-center bg-gradient-to-r from-[#E3E3E3] via-[#F7F7F7] to-[#E3E3E3]">
+            <div className="w-full max-w-[84rem] min-h-screen">
+                {/* Header */}
+                <header className="mt-8 w-full h-16 flex items-center bg-gradient-to-r from-[#ECECEC] via-[#FCFCFC] to-[#ECECEC] shadow-lg shadow-black/5 rounded-lg">
+                    <div className="mr-auto flex h-16 p-2 items-center">
+                        {/* Branding Logo */}
+                        <div className="w-12 h-12 bg-[url('/images/zufall-logo-color.png')] bg-no-repeat bg-center bg-cover rounded-lg"></div>
 
-                    {issues.length === 0 ? (
-                        <p className="text-gray-500">No issues found</p>
-                    ) : (
-                        <ul className="space-y-2">
-                            {issues.map((issue) => (
-                                <li key={issue.id} className="border rounded p-3">
-                                    <a
-                                        href={issue.html_url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-600 hover:underline"
-                                    >
-                                        {issue.title}
-                                    </a>
-                                    <span className={`ml-2 px-2 py-1 text-sm rounded-full ${issue.state === 'open'
-                                            ? 'bg-green-100 text-green-800'
-                                            : 'bg-gray-100 text-gray-800'
-                                        }`}>
-                                        {issue.state}
-                                    </span>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            ))}
+                        {/* Branding Text */}
+                        <div className="ml-5 font-bold">Zufall Labs</div>
+                    </div>
+
+                    {/* Middle Accents */}
+                    <div className="w-16 h-2 absolute left-1/2 -translate-x-1/2 flex flex-col justify-between">
+                        <div className="h-[2px] w-16 bg-[#7E7E7E]"></div>
+                        <div className="h-[2px] w-16 bg-[#7E7E7E]"></div>
+                    </div>
+
+                    {/* GitHub Button */}
+                    <div className="ml-auto mr-2">
+                        <button className="bg-black text-white rounded-lg h-12 px-8 font-bold">
+                            GitHub
+                        </button>
+                    </div>
+                </header>
+
+                {/* Main content area */}
+                <main className="mt-8 relative w-full border-4 border-green-500 min-h-[calc(100vh-8rem)] bg-[url('/images/hero.png')] bg-no-repeat bg-center">
+
+                    {/* Hero Section */}
+                    <div className="w-1/3 h-8 mt-52 space-y-4 border-4 border-red-500"></div>
+
+                    {/* Join Section */}
+                    <div className="absolute bottom-10 left-0 w-1/3 h-16 border-4 border-red-500"></div>
+
+                    {/* Apply Section */}
+                    <div className="absolute top-0 right-0 w-1/3 h-16 border-4 border-red-500"></div>
+
+                    {/* Issues Widget Section */}
+                    <div className="absolute bottom-10 right-0 w-1/3 h-96 border-4 border-red-500"></div>
+                </main>
+            </div>
         </div>
     );
 }
