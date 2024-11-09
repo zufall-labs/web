@@ -1,5 +1,5 @@
 // app/routes/dashboard.tsx
-import { json, type LoaderFunction } from "@remix-run/node";
+import { type LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { GitHubLoaderData } from "~/types/github";
 
@@ -10,14 +10,15 @@ export const loader: LoaderFunction = async ({ request }) => {
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
-            throw new Error(`API returned ${response.status}`);
+            console.error(`API returned ${response.status}`);
         }
 
-        const data = await response.json();
-        return json<GitHubLoaderData>(data);
+        const responseData: GitHubLoaderData = await response.json();
+        return Response.json(responseData);
     } catch (error) {
         console.error("Error fetching issues:", error);
-        return json<GitHubLoaderData>({ data: [] });
+        const responseData: GitHubLoaderData = { data: [] };
+        return Response.json(responseData);
     }
 };
 

@@ -1,7 +1,6 @@
 import type { LoaderFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
 import { z } from "zod";
-import type { RepoIssues, GitHubLoaderData } from "~/types/github";
+import type { GitHubLoaderData, RepoIssues } from "~/types/github";
 
 const CONFIG = {
     OWNER: "zufall-labs",
@@ -36,7 +35,8 @@ export const loader: LoaderFunction = async () => {
     const now = Date.now();
 
     if (cachedData && now < cacheExpiration) {
-        return json<GitHubLoaderData>({ data: cachedData });
+        const responseData: GitHubLoaderData = { data: cachedData };
+        return Response.json(responseData);
     }
 
     try {
@@ -57,14 +57,19 @@ export const loader: LoaderFunction = async () => {
         cachedData = issuesByRepo;
         cacheExpiration = now + CONFIG.CACHE_DURATION;
 
-        return json<GitHubLoaderData>({ data: issuesByRepo });
+        const responseData: GitHubLoaderData = { data: issuesByRepo };
+        return Response.json(responseData);
     } catch (error) {
         console.error("Error fetching issues:", error);
 
         if (error instanceof z.ZodError) {
-            return json({ error: "Invalid environment configuration", details: error.errors }, { status: 500 });
+            return Response.json(
+                { error: "Invalid environment configuration", details: error.errors },
+                { status: 500 }
+            );
         }
 
-        return json<GitHubLoaderData>({ data: [] });
+        const responseData: GitHubLoaderData = { data: [] };
+        return Response.json(responseData);
     }
 };
