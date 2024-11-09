@@ -23,11 +23,11 @@ export default function LandingPage() {
                     </div>
 
                     {/* GitHub Button */}
-                    <div className="ml-auto mr-2">
+                    <a href="https://github.com/zufall-labs" target="_blank" className="ml-auto mr-2">
                         <button className="bg-black text-white rounded-lg h-12 px-10 font-helvetica-now font-bold">
                             GitHub
                         </button>
-                    </div>
+                    </a>
                 </header>
 
                 {/* Main content area */}
@@ -46,12 +46,12 @@ export default function LandingPage() {
                             labore et
                             dolore magna aliqua.
                         </div>
-                        {/* Connect button */}
-                        <div>
-                            <button className="border-solid border-2 border-black text-[#89458a] rounded-lg h-10 w-2/5">
+                        {/* Get in touch button */}
+                        <a href="mailto:backoffice@zufall.ai">
+                            <button className="mt-3 border-solid border-2 border-black text-[#89458a] rounded-lg h-10 w-2/5">
                                 GET IN TOUCH
                             </button>
-                        </div>
+                        </a>
                     </div>
 
                     {/* Join Section */}
@@ -78,10 +78,12 @@ export default function LandingPage() {
                                 Research internships
                             </div>
                             {/* Left button */}
-                            <button
-                                className="border-solid border-2 border-black text-[#89458a] rounded-lg h-10 w-full">
-                                Apply now
-                            </button>
+                            <a href="mailto:backoffice@zufall.ai">
+                                <button
+                                    className="border-solid border-2 border-black text-[#89458a] rounded-lg h-10 w-full">
+                                    Apply now
+                                </button>
+                            </a>
                         </div>
                         {/* Spacer */}
                         <div className="left-1/2 mx-6 w-0.5 bg-[#000000]"></div>
@@ -92,10 +94,12 @@ export default function LandingPage() {
                                 Open for investment
                             </div>
                             {/* Right button */}
-                            <button
-                                className="border-solid border-2 border-black text-[#89458a] rounded-lg h-10 w-full">
-                                Invest in us
-                            </button>
+                            <a href="mailto:backoffice@zufall.ai">
+                                <button
+                                    className="border-solid border-2 border-black text-[#89458a] rounded-lg h-10 w-full">
+                                    Invest in us
+                                </button>
+                            </a>
                         </div>
                     </div>
 
