@@ -16,7 +16,7 @@ export const loader: LoaderFunction = async ({ request }) => {
         const data = await response.json();
         return json<GitHubLoaderData>(data);
     } catch (error) {
-        console.error('Error fetching issues:', error);
+        console.error("Error fetching issues:", error);
         return json<GitHubLoaderData>({ data: [] });
     }
 };
@@ -44,10 +44,10 @@ export default function APITest() {
                                     >
                                         {issue.title}
                                     </a>
-                                    <span className={`ml-2 px-2 py-1 text-sm rounded-full ${issue.state === 'open'
-                                            ? 'bg-green-100 text-green-800'
-                                            : 'bg-gray-100 text-gray-800'
-                                        }`}>
+                                    <span className={`ml-2 px-2 py-1 text-sm rounded-full ${issue.state === "open"
+                                        ? "bg-green-100 text-green-800"
+                                        : "bg-gray-100 text-gray-800"
+                                    }`}>
                                         {issue.state}
                                     </span>
                                 </li>

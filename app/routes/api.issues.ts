@@ -6,12 +6,12 @@ import type { RepoIssues, GitHubLoaderData } from "~/types/github";
 const CONFIG = {
     OWNER: "zufall-labs",
     CACHE_DURATION: 5 * 60 * 1000, // 5 Minutes
-    GITHUB_API_BASE: "https://api.github.com",
+    GITHUB_API_BASE: "https://api.github.com"
 } as const;
 
 const envSchema = z.object({
     REPOSITORIES: z.string().transform(str => str.split(",").map(s => s.trim())),
-    SECRET_ACCESS_TOKEN: z.string().min(1, "GitHub token is required"),
+    SECRET_ACCESS_TOKEN: z.string().min(1, "GitHub token is required")
 });
 
 let cachedData: RepoIssues[] | null = null;
@@ -23,8 +23,8 @@ const fetchRepoIssues = async (repo: string, token: string) => {
         {
             headers: {
                 "Authorization": `token ${token}`,
-                "Accept": "application/vnd.github.v3+json",
-            },
+                "Accept": "application/vnd.github.v3+json"
+            }
         }
     );
 
