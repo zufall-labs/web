@@ -1,21 +1,21 @@
 export default function LandingPage() {
     return (
         /* Whole page */
-        <div className="flex min-h-screen justify-center bg-gradient-to-r from-[#E3E3E3] via-[#F7F7F7] to-[#E3E3E3]">
+        <div className="flex min-h-screen justify-center items-center bg-gradient-to-r from-[#E3E3E3] via-[#F7F7F7] to-[#E3E3E3]">
             {/* Content page */}
-            <div className="min-h-screen w-full max-w-[84rem]">
+            <div className="w-full max-w-[80rem]">
                 {/* Header */}
-                <header className="mt-8 flex h-16 w-full items-center rounded-lg bg-gradient-to-r from-[#ECECEC] via-[#FCFCFC] to-[#ECECEC] shadow-lg shadow-black/5">
+                <header className="mobile:w-[85%] mobile:mx-auto mobile:mt-4 mt-8 flex h-16 w-full items-center rounded-lg bg-gradient-to-r from-[#ECECEC] via-[#FCFCFC] to-[#ECECEC] shadow-lg shadow-black/5">
                     <div className="mr-auto flex h-16 items-center p-2">
                         {/* Branding Logo */}
                         <div className="h-12 w-12 rounded-lg bg-[url('/images/zufall-logo-color.png')] bg-cover bg-center bg-no-repeat"></div>
 
                         {/* Branding Text */}
-                        <div className="ml-5 font-helvetica-now font-bold">Zufall Labs</div>
+                        <div className="ml-5 font-helvetica-now font-extrabold mobile:text-lg">Zufall Labs</div>
                     </div>
 
                     {/* Middle Accents */}
-                    <div className="absolute left-1/2 flex h-2 w-16 -translate-x-1/2 flex-col justify-between">
+                    <div className="mobile:hidden absolute left-1/2 flex h-2 w-16 -translate-x-1/2 flex-col justify-between">
                         <div className="h-[2px] w-16 bg-[#7E7E7E]"></div>
                         <div className="h-[2px] w-16 bg-[#7E7E7E]"></div>
                     </div>
@@ -30,59 +30,52 @@ export default function LandingPage() {
 
                 {/* Main content area */}
                 {/* Removing the green border destroyed the layout. Adding 'p-4' fixed that.*/}
-                <main className="relative mt-8 min-h-[calc(100vh-8rem)] w-full bg-[url('/images/hero.png')] bg-center bg-no-repeat p-4">
+                <main className="mobile:px-8 relative mt-8 min-h-[800px] w-full desktop:bg-[url('/images/hero.png')] bg-center bg-no-repeat p-4">
                     {/* Hero Section */}
-                    <div className="mt-32 h-4/5 w-1/3 space-y-4 font-helvetica-now">
+                    <div className="mobile:mt-[-40px] mt-32 h-4/5 mobile:w-full w-1/3 space-y-4 font-helvetica-now">
                         {/* Title */}
-                        <div className="text-8xl font-bold">Entropy & AI as a Service</div>
+                        <div className="mobile:text-8xl text-8xl font-bold tracking-tighter desktop:w-[85%] desktop:-ml-4">
+                            Entropy & AI as a Service
+                        </div>
                         {/* Subtitle */}
-                        <div className="text-l w-3/5">
+                        <div className="text-l w-3/5 mobile:w-full text-lg leading-5 tracking-wide desktop:-ml-4">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.
                         </div>
                         {/* Get in touch button */}
                         <a href="mailto:backoffice@zufall.ai">
-                            <button className="mt-3 h-10 w-2/5 rounded-lg border-2 border-solid border-black text-[#89458a]">
+                            <button className="desktop:-ml-4 mobile:mt-8 mt-6 h-10 mobile:w-full w-2/5 rounded-lg border border-solid border-black font-medium text-sm">
                                 GET IN TOUCH
                             </button>
                         </a>
                     </div>
 
-                    {/* Join Section */}
-                    <div className="absolute bottom-10 left-0 flex h-20 w-1/3 font-helvetica-now">
-                        {/* Left text */}
-                        <div className="w-1/5 content-center font-bold">Join us at Zufall Labs</div>
-                        {/* Spacer */}
-                        <div className="ml-2 w-0.5 bg-[#000000]"></div>
-                        {/* Right text */}
-                        <div className="ml-3 w-4/5 content-center">
-                            Lorem ipsum dolor sit asd fa s asjdf asdfasdjkfsadf asjdf asdjfs asdf asdf asfd asdf asdf
-                            asdf asdf
-                        </div>
+                    <div className="desktop:hidden w-full my-8">
+                        <img src="/images/hero.png"/>
                     </div>
 
                     {/* Apply Section */}
-                    <div className="absolute right-0 top-0 flex h-28 w-1/4 font-helvetica-now">
+                    <div className="mobile:w-full desktop:absolute desktop:right-0 desktop:top-0 desktop:flex desktop:h-24 w-1/4 font-helvetica-now mobile:mb-12">
                         {/* Left side */}
-                        <div className="ml-2 mr-auto flex w-2/5 flex-col justify-between">
+                        <div className="desktop:ml-2 mr-auto flex desktop:w-2/5 flex-col justify-between">
                             {/* Left text */}
-                            <div className="text-xl font-bold">Research internships</div>
+                            <div className="text-lg font-extrabold leading-5">Research Internships</div>
                             {/* Left button */}
                             <a href="mailto:backoffice@zufall.ai">
-                                <button className="h-10 w-full rounded-lg border-2 border-solid border-black text-[#89458a]">
+                                <button className="h-10 w-full rounded-lg border border-solid border-black uppercase mobile:mt-1 font-medium text-sm">
                                     Apply now
                                 </button>
                             </a>
                         </div>
                         {/* Spacer */}
-                        <div className="left-1/2 mx-6 w-0.5 bg-[#000000]"></div>
+                        <div className="mobile:hidden left-1/2 mx-6 w-[3px] bg-[#000000]"></div>
                         {/* Right side */}
-                        <div className="ml-auto mr-2 flex w-2/5 flex-col justify-between">
+                        <div className="ml-auto mobile:mt-6 flex desktop:w-2/5 flex-col justify-between">
                             {/* Right text */}
-                            <div className="text-xl font-bold">Open for investment</div>
+                            <div className="text-lg font-extrabold leading-5">Open for investment</div>
                             {/* Right button */}
                             <a href="mailto:backoffice@zufall.ai">
-                                <button className="h-10 w-full rounded-lg border-2 border-solid border-black text-[#89458a]">
+                                <button className="mobile:mt-1 h-10 w-full rounded-lg border border-solid border-black uppercase  font-medium text-sm">
                                     Invest in us
                                 </button>
                             </a>
@@ -90,15 +83,15 @@ export default function LandingPage() {
                     </div>
 
                     {/* Issues Widget Section */}
-                    <div className="absolute bottom-10 right-0 h-96 w-1/3 rounded-lg bg-[rgba(255,255,255,0.4)] font-helvetica-now font-bold backdrop-blur-sm">
+                    <div className="mobile:w-full desktop:absolute desktop:bottom-10 desktop:right-0 h-96 w-[29%] rounded-2xl bg-[rgba(255,255,255,0.4)] font-helvetica-now backdrop-blur-lg pt-8 pl-8 pr-4 pb-4">
                         {/* Content block */}
-                        <div className="m-4 h-[calc(100%-2rem)] w-[calc(100%-2rem)]">
+                        <div className="h-full w-full">
                             {/* Title */}
-                            <div className="h-14 w-1/4">Currently working on</div>
+                            <div className="h-14 w-1/3 leading-5 text-lg tracking-tight font-extrabold">Currently working on</div>
                             {/* Spacer */}
-                            <div className="mt-2 h-0.5 w-1/4 bg-[#000000]"></div>
+                            <div className="h-[3px] w-1/3 bg-[#000000]"></div>
                             {/* Issue content */}
-                            <div className="mt-3 h-[calc(100%-5.5rem)] overflow-scroll">
+                            <div className="mt-4 h-[calc(100%-5.5rem)] overflow-scroll">
                                 <div>- First item: Asdf</div>
                                 <div>- Second item: Asdf Asdf</div>
                                 <div>- Third item: Asdf Asdf Asdf</div>
@@ -110,6 +103,18 @@ export default function LandingPage() {
                                 <div>- Ninth item: Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf</div>
                                 <div>- Tenth item: Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf</div>
                             </div>
+                        </div>
+                    </div>
+                    {/* Join Section */}
+                    <div className=" mobile:w-full desktop:absolute desktop:bottom-10 desktop:left-0 flex h-auto w-1/3 font-helvetica-now mobile:mt-8">
+                        {/* Left text */}
+                        <div className="mobile:w-1/3 w-1/4 flex-none content-center font-extrabold leading-5 text-lg">Join us at Zufall Labs</div>
+                        {/* Spacer */}
+                        <div className="flex-none w-[3px] bg-[#000000]"></div>
+                        {/* Right text */}
+                        <div className="ml-5 content-center leading-4 tracking-wide font-medium">
+                            Lorem ipsum dolor sit asd fa s asjdf asdfasdjkfsadf asjdf asdjfs asdf asdf asfd asdf asdf
+                            asdf
                         </div>
                     </div>
                 </main>
