@@ -1,3 +1,5 @@
+import Carousel from "~/components/Carousel";
+
 export default function LandingPage() {
     return (
         /* Whole page */
@@ -83,28 +85,7 @@ export default function LandingPage() {
                     </div>
 
                     {/* Issues Widget Section */}
-                    <div className="mobile:w-full desktop:absolute desktop:bottom-10 desktop:right-0 h-96 w-[29%] rounded-2xl bg-[rgba(255,255,255,0.4)] font-helvetica-now backdrop-blur-lg pt-8 pl-8 pr-4 pb-4">
-                        {/* Content block */}
-                        <div className="h-full w-full">
-                            {/* Title */}
-                            <div className="h-14 w-1/3 leading-5 text-lg tracking-tight font-extrabold">Currently working on</div>
-                            {/* Spacer */}
-                            <div className="h-[3px] w-1/3 bg-[#000000]"></div>
-                            {/* Issue content */}
-                            <div className="mt-4 h-[calc(100%-5.5rem)] overflow-scroll">
-                                <div>- First item: Asdf</div>
-                                <div>- Second item: Asdf Asdf</div>
-                                <div>- Third item: Asdf Asdf Asdf</div>
-                                <div>- Fourth item: Asdf Asdf Asdf Asdf</div>
-                                <div>- Fifth item: Asdf Asdf Asdf Asdf Asdf</div>
-                                <div>- Sixth item: Asdf Asdf Asdf Asdf Asdf Asdf</div>
-                                <div>- Seventh item: Asdf Asdf Asdf Asdf Asdf Asdf Asdf</div>
-                                <div>- Eighth item: Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf</div>
-                                <div>- Ninth item: Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf</div>
-                                <div>- Tenth item: Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf Asdf</div>
-                            </div>
-                        </div>
-                    </div>
+                    <Carousel />
                     {/* Join Section */}
                     <div className=" mobile:w-full desktop:absolute desktop:bottom-10 desktop:left-0 flex h-auto w-1/3 font-helvetica-now mobile:mt-8">
                         {/* Left text */}
