@@ -8,9 +8,9 @@ function sanitizeText(text: string): string {
 
 export default function Carousel() {
     const { data: resultSet } = useLoaderData<GitHubLoaderData>();
-    const issues: GitHubIssue[] = resultSet.flatMap(repo => repo.issues);
+    const issues: GitHubIssue[] = resultSet.flatMap(repo => repo.issues).filter(issues => !issues.pull_request);
 
-    const [activeIndex, setActiveIndex] = useState<number>(3);
+    const [activeIndex, setActiveIndex] = useState<number>(issues.length > 3 ? 3 : issues.length - 1);
 
     const handleScroll = (direction: "up" | "down"): void => {
         setActiveIndex(previousIndex => {
