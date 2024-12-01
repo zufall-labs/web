@@ -25,11 +25,17 @@ export default function Carousel() {
     };
 
     const handleWheel = (e: ReactWheelEvent<HTMLDivElement>) => {
+        e.preventDefault();
         handleScroll(e.deltaY > 0 ? "down" : "up");
     };
 
     const handleTouchStart = (e: ReactTouchEvent<HTMLDivElement>) => {
+        e.preventDefault();
         touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e: ReactTouchEvent<HTMLDivElement>) => {
+        e.preventDefault();
     };
 
     const handleTouchEnd = (e: ReactTouchEvent<HTMLDivElement>) => {
@@ -55,7 +61,12 @@ export default function Carousel() {
                 <div
                     onWheel={handleWheel}
                     onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
                     onTouchEnd={handleTouchEnd}
+                    style={{
+                        touchAction: "none",
+                        overscrollBehavior: "none"
+                    }}
                     className="scrollbar-none mt-4 h-[calc(100%-5.5rem)] flex-col items-start gap-2 overflow-hidden text-left text-2xl">
                     {issues.map((item: GitHubIssue, index: number) => {
                         const distance = Math.abs(index - activeIndex);
