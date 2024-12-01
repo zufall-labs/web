@@ -3,7 +3,7 @@ import Carousel from "~/components/Carousel";
 export default function LandingPage() {
     return (
         /* Whole page */
-        <div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-[#E3E3E3] via-[#F7F7F7] to-[#E3E3E3]">
+        <div className="flex min-h-screen items-center justify-center">
             {/* Content page */}
             <div className="w-full max-w-[80rem]">
                 {/* Header */}
