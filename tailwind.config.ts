@@ -17,14 +17,11 @@ export default {
                 black: "900"
             },
             screens: {
-                mobile: { max: "479px" },
-                // => @media (max-width: 479px) { ... }
+                mobile: { max: "767px" },
 
-                tablet: { max: "767px" },
-                // => @media (max-width: 767px) { ... }
+                tablet: { min: "768px", max: "1200px" },
 
                 desktop: { min: "1200px" },
-                // => @media (min-width: 1200px) { ... }
             },
         },
     },
