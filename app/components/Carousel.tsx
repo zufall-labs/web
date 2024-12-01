@@ -1,22 +1,21 @@
 import { useState } from "react";
+import { useLoaderData } from "@remix-run/react";
+import type { GitHubIssue, GitHubLoaderData } from "~/types/github";
+
+function sanitizeText(text: string): string {
+    return text.replace(/\[[^\]]+\]:\s*/g, "");
+}
 
 export default function Carousel() {
-    const [items] = useState<string[]>([
-        "Buzzmod Tempor Indci",
-        "Adipiscing Elit Sed Do",
-        "Sit Amet Consectetur",
-        "Adipiscing Elit Sed Do",
-        "Sit Amet Consectetur",
-        "Adipiscing Elit Sed Do",
-        "Sit Amet Consectetur"
-    ]);
+    const { data: resultSet } = useLoaderData<GitHubLoaderData>();
+    const issues: GitHubIssue[] = resultSet.flatMap(repo => repo.issues);
 
-    const [activeIndex, setActiveIndex] = useState<number>(items.length > 3 ? 3 : items.length - 1);
+    const [activeIndex, setActiveIndex] = useState<number>(3);
 
     const handleScroll = (direction: "up" | "down"): void => {
         setActiveIndex(previousIndex => {
             if (direction === "up" && previousIndex > 0) return previousIndex - 1;
-            if (direction === "down" && previousIndex < items.length - 1) return previousIndex + 1;
+            if (direction === "down" && previousIndex < issues.length - 1) return previousIndex + 1;
 
             return previousIndex;
         });
@@ -36,11 +35,11 @@ export default function Carousel() {
                 <div
                     onWheel={e => handleScroll(e.deltaY > 0 ? "down" : "up")}
                     className="scrollbar-none mt-4 h-[calc(100%-5.5rem)] flex-col items-start gap-2 overflow-hidden text-left text-2xl">
-                    {items.map((item, index) => {
+                    {issues.map((item: GitHubIssue, index: number) => {
                         const distance = Math.abs(index - activeIndex);
                         const scale = 1 - distance * 0.2; // Scale reduces based on distance
                         const opacity = 1 - distance * 0.2; // Opacity reduces with distance
-                        const zIndex = items.length - distance;
+                        const zIndex = issues.length - distance;
 
                         return (
                             <div key={index} className="flex w-full">
@@ -54,7 +53,7 @@ export default function Carousel() {
                                         opacity: opacity,
                                         zIndex: zIndex
                                     }}>
-                                    {item}
+                                    {sanitizeText(item.title)}
                                 </div>
                             </div>
                         );

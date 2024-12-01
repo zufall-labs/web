@@ -1,4 +1,25 @@
 import Carousel from "~/components/Carousel";
+import { type LoaderFunction } from "@remix-run/node";
+import type { GitHubLoaderData } from "~/types/github";
+
+export const loader: LoaderFunction = async ({ request }) => {
+    const url = new URL(request.url);
+    const apiUrl = `${url.origin}/api/issues`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            console.error(`API returned ${response.status}`);
+        }
+
+        const responseData: GitHubLoaderData = await response.json();
+        return Response.json(responseData);
+    } catch (error) {
+        console.error("Error fetching issues:", error);
+        const responseData: GitHubLoaderData = { data: [] };
+        return Response.json(responseData);
+    }
+};
 
 export default function LandingPage() {
     return (
