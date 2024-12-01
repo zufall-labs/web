@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, TouchEvent as ReactTouchEvent, WheelEvent as ReactWheelEvent } from "react";
 import { useLoaderData } from "@remix-run/react";
 import type { GitHubIssue, GitHubLoaderData } from "~/types/github";
+
+let touchStartY: number = 0;
+const TOUCH_SENSITIVITY: number = 20;
 
 function sanitizeText(text: string): string {
     return text.replace(/\[[^\]]+\]:\s*/g, "");
@@ -21,6 +24,23 @@ export default function Carousel() {
         });
     };
 
+    const handleWheel = (e: ReactWheelEvent<HTMLDivElement>) => {
+        handleScroll(e.deltaY > 0 ? "down" : "up");
+    };
+
+    const handleTouchStart = (e: ReactTouchEvent<HTMLDivElement>) => {
+        touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: ReactTouchEvent<HTMLDivElement>) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaY = touchStartY - touchEndY;
+
+        if (Math.abs(deltaY) > TOUCH_SENSITIVITY) {
+            handleScroll(deltaY > 0 ? "down" : "up");
+        }
+    };
+
     return (
         <div className="h-[25rem] w-[29%] overflow-hidden rounded-2xl bg-[rgba(255,255,255,0.4)] pb-4 pl-8 pr-4 pt-8 font-helvetica-now backdrop-blur-lg mobile:w-full tablet:w-full desktop:absolute desktop:bottom-10 desktop:right-0">
             {/* Content block */}
@@ -33,7 +53,9 @@ export default function Carousel() {
                 <div className="h-[3px] w-1/3 bg-[#000000]"></div>
                 {/* Issue content */}
                 <div
-                    onWheel={e => handleScroll(e.deltaY > 0 ? "down" : "up")}
+                    onWheel={handleWheel}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
                     className="scrollbar-none mt-4 h-[calc(100%-5.5rem)] flex-col items-start gap-2 overflow-hidden text-left text-2xl">
                     {issues.map((item: GitHubIssue, index: number) => {
                         const distance = Math.abs(index - activeIndex);
