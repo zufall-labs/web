@@ -45,7 +45,7 @@ export default function LandingPage() {
 
                     {/* GitHub Button */}
                     <a href="https://github.com/zufall-labs" target="_blank" className="ml-auto mr-2">
-                        <button className="h-12 rounded-lg bg-black px-10 font-helvetica-now font-bold text-white transition-colors duration-200 hover:bg-white hover:text-black">
+                        <button className="h-12 rounded-lg bg-black px-10 font-helvetica-now font-bold text-white">
                             GitHub
                         </button>
                     </a>
@@ -61,9 +61,9 @@ export default function LandingPage() {
                             Entropy & AI as a Service
                         </div>
                         {/* Subtitle */}
-                        <div className="text-l w-3/5 text-lg leading-5 tracking-wide mobile:w-full tablet:w-full desktop:-ml-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
+                        <div className="text-l w-[62%] text-lg leading-5 tracking-wide mobile:w-full tablet:w-full desktop:-ml-4">
+                            Bringing powerful entropy and AI solutions within reach. Our platform makes enterprise-grade
+                            tools accessible and affordable, helping teams of any size build amazing projects.
                         </div>
                         {/* Get in touch button */}
                         <a href="mailto:backoffice@zufall.ai">
