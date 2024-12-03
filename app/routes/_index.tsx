@@ -28,7 +28,7 @@ export default function LandingPage() {
             {/* Content page */}
             <div className="w-full max-w-[80rem]">
                 {/* Header */}
-                <header className="mt-8 flex h-16 w-full items-center rounded-lg bg-gradient-to-r from-[#ECECEC] via-[#FCFCFC] to-[#ECECEC] shadow-lg shadow-black/5 mobile:mx-auto mobile:mt-4 mobile:w-[85%] tablet:mx-auto tablet:w-[90%]">
+                <header className="flex h-16 w-full items-center rounded-lg bg-gradient-to-r from-[#ECECEC] via-[#FCFCFC] to-[#ECECEC] shadow-lg shadow-black/5 mobile:mx-auto mobile:mt-4 mobile:w-[85%] tablet:mx-auto tablet:w-[90%]">
                     <div className="mr-auto flex h-16 items-center p-2">
                         {/* Branding Logo */}
                         <div className="h-12 w-12 rounded-lg bg-[url('/images/zufall-logo-color.png')] bg-cover bg-center bg-no-repeat"></div>
@@ -117,11 +117,14 @@ export default function LandingPage() {
                         <div className="w-[3px] flex-none bg-[#000000]"></div>
                         {/* Right text */}
                         <div className="ml-5 content-center font-medium leading-4 tracking-wide">
-                            Lorem ipsum dolor sit asd fa s asjdf asdfasdjkfsadf asjdf asdjfs asdf asdf asfd asdf asdf
-                            asdf
+                            Students and professionals - Join our mission to democratize advanced technology. Your ideas
+                            matter.
                         </div>
                     </div>
                 </main>
+                <p className="mt-3 text-center text-sm font-light tracking-wide text-gray-400 mobile:mb-4 tablet:mb-4">
+                    Zufall Labs &copy; {new Date().getFullYear()}
+                </p>
             </div>
         </div>
     );
