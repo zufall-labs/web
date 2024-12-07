@@ -20,7 +20,7 @@ export const meta: MetaFunction = () => {
     },
     {
         property: "og:image",
-        content: " https://zufall.ai/images/zufall-banner-color-no-zoom.png",
+        content: "https://zufall.ai/images/zufall-banner-color-no-zoom.png",
     },
     {
         property: "og:url",
