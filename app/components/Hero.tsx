@@ -1,3 +1,5 @@
+import Button from "./Button"
+
 export default function Hero() {
     return(
         <div>
@@ -12,11 +14,7 @@ export default function Hero() {
                     tools accessible and affordable, helping teams of any size build amazing projects.
                 </div>
                 {/* Get in touch button */}
-                <a href="mailto:backoffice@zufall.ai">
-                    <button className="mt-6 h-10 w-2/5 rounded-lg border border-solid border-black text-sm font-medium mobile:mt-8 mobile:w-full tablet:w-full desktop:-ml-4">
-                        GET IN TOUCH
-                    </button>
-                </a>
+                <Button name="GET IN TOUCH" link="mailto:backoffice@zufall.ai" className="mt-6 h-10 w-2/5 rounded-lg border border-solid border-black text-sm font-medium mobile:mt-8 mobile:w-full tablet:w-full desktop:-ml-4"/>
             </div>
 
             <div className="my-8 w-full desktop:hidden">

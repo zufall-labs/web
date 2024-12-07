@@ -1,3 +1,4 @@
+import Button from "./Button"
 export default function Header() {
     return(
         <header className="flex h-16 w-full items-center rounded-lg bg-gradient-to-r from-[#ECECEC] via-[#FCFCFC] to-[#ECECEC] shadow-lg shadow-black/5 mobile:mx-auto mobile:mt-4 mobile:w-[85%] tablet:mx-auto tablet:w-[90%]">
@@ -16,11 +17,7 @@ export default function Header() {
             </div>
 
             {/* GitHub Button */}
-            <a href="https://github.com/zufall-labs" target="_blank" rel="noreferrer" className="ml-auto mr-2">
-                <button className="h-12 rounded-lg bg-black px-10 font-helvetica-now font-bold text-white">
-                    GitHub
-                </button>
-            </a>
+            <Button name="Github" link="https://github.com/zufall-labs" className="ml-auto mr-2 h-12 rounded-lg bg-black px-10 font-helvetica-now font-bold text-white flex items-center justify-center"/>
         </header>
     )
 }
