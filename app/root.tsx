@@ -1,6 +1,38 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/node";
 
 import "~/styles/tailwind.css";
+
+export const meta: MetaFunction = () => {
+    return [
+    { title: "Zufall Labs - Landing Page" },
+    {
+        name: "description",
+        content: "Democratizing enterprise-grade technology to help teams of any size build amazing projects.",
+    },
+    {
+        property: "og:title",
+        content: "Zufall Labs - Landing Page",
+    },
+    {
+        property: "og:description",
+        content: "Democratizing enterprise-grade technology to help teams of any size build amazing projects.",
+    },
+    {
+        property: "og:image",
+        content: "https://zufall.ai/images/zufall-banner-color-no-zoom.png",
+    },
+    {
+        property: "og:url",
+        content: "https://zufall.ai",
+    },
+    {
+        property: "og:type",
+        content: "website",
+    },
+    ];
+};
+
 
 export default function App() {
     return (
