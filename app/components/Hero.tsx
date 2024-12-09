@@ -14,7 +14,7 @@ export default function Hero() {
                     tools accessible and affordable, helping teams of any size build amazing projects.
                 </div>
                 {/* Get in touch button */}
-                <Button name="GET IN TOUCH" link="mailto:backoffice@zufall.ai" className="mt-6 h-10 w-2/5 rounded-lg border border-solid border-black text-sm font-medium mobile:mt-8 mobile:w-full tablet:w-full desktop:-ml-4"/>
+                <Button name="GET IN TOUCH" link="mailto:backoffice@zufall.ai" variant="secondary"/>
             </div>
 
             <div className="my-8 w-full desktop:hidden">

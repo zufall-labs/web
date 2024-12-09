@@ -17,7 +17,7 @@ export default function Header() {
             </div>
 
             {/* GitHub Button */}
-            <Button name="Github" link="https://github.com/zufall-labs" className="ml-auto mr-2 h-12 rounded-lg bg-black px-10 font-helvetica-now font-bold text-white flex items-center justify-center"/>
+            <Button name="Github" link="https://github.com/zufall-labs" variant="inverted"/>
         </header>
     )
 }
