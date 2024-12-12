@@ -52,7 +52,7 @@ export default function Carousel() {
             {/* Content block */}
             <div className="h-full w-full">
                 {/* Title */}
-                <div className="h-14 w-1/3 text-lg font-extrabold leading-5 tracking-tight tablet:h-10">
+                <div className="h-14 w-1/3 text-lg font-extrabold leading-5 tracking-tight tablet:h-10 smobile:w-1/2">
                     Currently working on
                 </div>
                 {/* Spacer */}

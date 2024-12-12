@@ -5,7 +5,7 @@ export default function Hero() {
         <div>
             <div className="mt-28 h-4/5 w-1/3 space-y-4 font-helvetica-now mobile:mt-[-40px] mobile:w-full tablet:mt-0 tablet:w-full">
                 {/* Title */}
-                <div className="text-8xl font-bold tracking-tighter mobile:mt-6 mobile:text-8xl tablet:text-center tablet:text-9xl desktop:-ml-4 desktop:w-[85%]">
+                <div className="text-8xl font-bold tracking-tighter mobile:mt-6 mobile:text-8xl tablet:text-center tablet:text-9xl desktop:-ml-4 desktop:w-[85%] smobile:!text-[5rem]">
                     Entropy & AI as a Service
                 </div>
                 {/* Subtitle */}

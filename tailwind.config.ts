@@ -17,6 +17,8 @@ export default {
                 black: "900"
             },
             screens: {
+                smobile: { max: "394px" },
+
                 mobile: { max: "767px" },
 
                 tablet: { min: "768px", max: "1200px" },

@@ -7,7 +7,7 @@ export default function Header() {
                 <div className="h-12 w-12 rounded-lg bg-[url('/images/zufall-logo-color.png')] bg-cover bg-center bg-no-repeat"></div>
 
                 {/* Branding Text */}
-                <div className="ml-5 font-helvetica-now font-extrabold mobile:text-lg">Zufall Labs</div>
+                <div className="ml-5 font-helvetica-now font-extrabold mobile:text-lg smobile:ml-3">Zufall Labs</div>
             </div>
 
             {/* Middle Accents */}
