@@ -17,7 +17,7 @@ export default function Header() {
             </div>
 
             {/* GitHub Button */}
-            <Button name="Github" link="https://github.com/zufall-labs" variant="inverted"/>
+            <Button name="GitHub" link="https://github.com/zufall-labs" variant="inverted"/>
         </header>
     )
 }
