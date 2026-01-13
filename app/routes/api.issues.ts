@@ -19,7 +19,8 @@ let cacheExpiration: number = 0;
 const fetchRepoIssues = async (repo: string, token: string) => {
     const res = await fetch(`${CONFIG.GITHUB_API_BASE}/repos/${CONFIG.OWNER}/${repo}/issues`, {
         headers: {
-            Authorization: `token ${token}`,
+            Authorization: `Bearer ${token}`,
+            "X-GitHub-Api-Version": "2022-11-28",
             Accept: "application/vnd.github.v3+json"
         }
     });
